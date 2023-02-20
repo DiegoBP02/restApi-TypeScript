@@ -1,0 +1,9 @@
+export default {
+  port: 1337,
+  dbUri: "MONGO URI",
+  saltWorkFactor: 10,
+  accessTokenTtl: "15m",
+  refreshTokenTtl: "1y",
+  publicKey: `LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0KTUZ3d0RRWUpLb1pJaHZjTkFRRUJCUUFEU3dBd1NBSkJBTUw3MkQyRTZkYUM0czNWUlZ0a1NPT08zdzdGaytJdAo3elNWUE9MVGZTRndHRzZZb2oxc0E4M3NpbWFxME93RkNKazVvWnBqVEtZUmF0TjNOamZndDBjQ0F3RUFBUT09Ci0tLS0tRU5EIFBVQkxJQyBLRVktLS0tLQ==`,
+  privateKey: "PRIVATE KEY",
+};

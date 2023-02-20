@@ -33,14 +33,14 @@ export async function createUserSessionHandler(req: Request, res: Response) {
     { expiresIn: config.get("refreshTokenTtl") } // 1 year
   );
 
-  res.status(200).json({ accessToken, refreshToken });
+  return res.send({ accessToken, refreshToken });
 }
 
 export async function getUserSessionsHandler(req: Request, res: Response) {
   const userId = res.locals.user.object.object.userId;
 
   const sessions = await findSessions({ user: userId, valid: true });
-  res.status(200).json(sessions);
+  return res.send(sessions);
 }
 
 export async function deleteSessionHandler(req: Request, res: Response) {
